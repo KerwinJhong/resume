@@ -17,7 +17,7 @@
             <v-hover>
               <template v-slot="{ hover }">
                 <v-card class="mx-auto py-3" max-width="1100" :elevation="hover ? 24 : 6">
-                  <v-icon x-large class="mb-2">
+                  <v-icon x-large class="mb-2" :style="`color: ${item.color};`">
                     {{ item.icon }}
                   </v-icon>
                   <v-list-item-title class="text-capitalize">
@@ -42,27 +42,29 @@ export default {
         {
           title: 'frontend',
           items: [
-            { name: 'vue', icon: 'mdi-vuejs' },
-            { name: 'nuxt', icon: 'mdi-nuxt' },
-            { name: 'vuetify', icon: 'mdi-vuetify' }
+            { name: 'vue', icon: 'mdi-vuejs', color: '#42B983' },
+            { name: 'nuxt', icon: 'mdi-nuxt', color: '#42B983' },
+            { name: 'vuetify', icon: 'mdi-vuetify', color: '#AEDDFF' },
+            { name: 'scss', icon: 'mdi-sass', color: '#CD6799' },
+            { name: 'socket.IO', icon: 'mdi-tools', color: '#757575' }
           ]
         }, {
           title: 'backend',
           items: [
-            { name: 'node', icon: 'mdi-nodejs' },
-            { name: 'express', icon: 'mdi-tools' },
-            { name: 'sequelize', icon: 'mdi-tools' },
-            { name: 'mongoose', icon: 'mdi-tools' }
+            { name: 'node', icon: 'mdi-nodejs', color: '#95B94D' },
+            { name: 'express', icon: 'mdi-tools', color: '#757575' },
+            { name: 'sequelize', icon: 'mdi-tools', color: '#757575' },
+            { name: 'mongoose', icon: 'mdi-tools', color: '#757575' }
           ]
         }, {
           title: 'others',
           items: [
-            { name: 'git', icon: 'git' },
-            { name: 'git flow', icon: 'mdi-tools' },
-            { name: 'trello', icon: 'mdi-trello' },
-            { name: 'hackmd', icon: 'mdi-tools' },
-            { name: 'balsamiq mockups 3', icon: 'mdi-lead-pencil' },
-            { name: 'heroku', icon: 'mdi-tools' }
+            { name: 'git', icon: 'git', color: '#E94E32' },
+            { name: 'git flow', icon: 'mdi-tools', color: '#757575' },
+            { name: 'trello', icon: 'mdi-trello', color: '#007CC3' },
+            { name: 'hackmd', icon: 'mdi-tools', color: '#757575' },
+            { name: 'balsamiq mockups 3', icon: 'mdi-tools', color: '#757575' },
+            { name: 'heroku', icon: 'mdi-tools', color: '#757575' }
           ]
         }
       ]

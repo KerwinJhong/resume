@@ -2,8 +2,8 @@
   <v-container>
     <v-row>
       <v-col
-        v-for="(item, index1) in projects"
-        :key="index1"
+        v-for="(item, index) in projects"
+        :key="index"
         cols="12"
         sm="6"
         md="4"
@@ -12,21 +12,22 @@
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title class="headline">
-                Our Changing Planet
+                {{ item.title }}
               </v-list-item-title>
-              <v-list-item-subtitle>by Kurt Wagner</v-list-item-subtitle>
+              <v-list-item-subtitle>{{ item.skills }}</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/mountain.jpg" height="194"></v-img>
-          <v-card-text>
-            Visit ten places on our planet that are undergoing the biggest changes today.
-          </v-card-text>
+          <v-img eager height="194" :src="item.img" :lazy-src="item.img"></v-img>
+          <v-chip v-for="(chip, index1) in item.items" :key="index1" class="ma-2" color="primary">
+            {{ chip }}
+          </v-chip>
+          <v-divider class="mx-4"></v-divider>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn icon>
+            <v-btn icon :href="item.heroku" target="_blank">
               <v-icon>mdi-application</v-icon>
             </v-btn>
-            <v-btn icon>
+            <v-btn icon :href="item.github" target="_blank">
               <v-icon>mdi-git</v-icon>
             </v-btn>
           </v-card-actions>
@@ -42,30 +43,12 @@ export default {
     return {
       projects: [
         {
-          title: 'frontend',
-          items: [
-            { name: 'vue', icon: 'mdi-vuejs' },
-            { name: 'nuxt', icon: 'mdi-nuxt' },
-            { name: 'vuetify', icon: 'mdi-vuetify' }
-          ]
-        }, {
-          title: 'backend',
-          items: [
-            { name: 'node', icon: 'mdi-nodejs' },
-            { name: 'express', icon: 'mdi-tools' },
-            { name: 'sequelize', icon: 'mdi-tools' },
-            { name: 'mongoose', icon: 'mdi-tools' }
-          ]
-        }, {
-          title: 'others',
-          items: [
-            { name: 'git', icon: 'git' },
-            { name: 'git flow', icon: 'mdi-tools' },
-            { name: 'trello', icon: 'mdi-trello' },
-            { name: 'hackmd', icon: 'mdi-tools' },
-            { name: 'balsamiq mockups 3', icon: 'mdi-lead-pencil' },
-            { name: 'heroku', icon: 'mdi-tools' }
-          ]
+          title: 'CRM-濾客平台',
+          skills: 'vue、vuex、scss',
+          img: require('@/assets/CRM.png'),
+          items: ['獨立開發', '與後端工程師共同開發', 'wireframe', 'POS功能', 'Dashboard', '客戶端-點餐功能', '開發時程6週'],
+          heroku: 'https://recus.herokuapp.com/signin',
+          github: 'https://github.com/IgnacioFan/recus-platform'
         }
       ]
     }
