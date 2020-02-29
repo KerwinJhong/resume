@@ -63,7 +63,8 @@ export default {
             { name: 'nuxt', icon: 'mdi-nuxt', color: '#42B983' },
             { name: 'vuetify', icon: 'mdi-vuetify', color: '#AEDDFF' },
             { name: 'scss', icon: 'mdi-sass', color: '#CD6799' },
-            { name: 'socket.IO', img: require('@/assets/socket.png'), color: '#757575' }
+            { name: 'socket.IO', img: require('@/assets/socket.png'), color: '#757575' },
+            { name: 'bootstrap 4', img: require('@/assets/Bootstrap.png'), color: '#CD6799' }
           ]
         }, {
           title: 'backend',
