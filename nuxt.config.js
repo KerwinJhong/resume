@@ -43,8 +43,23 @@ module.exports = {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/sitemap'
   ],
+  sitemap: {
+    path: '/sitemap.xml', // sitemap名稱，不用改
+    hostname: 'https://www.kerwinresume.gq/', // 網址
+    cacheTime: 1000 * 60 * 15, // 站點路由更新頻率，只在 generate: false有用
+    gzip: true, // 生成 .xml.gz 檔的 sitemap
+    generate: true, // 允許使用 nuxt generate 生成
+    // 排除不要的頁面路由
+    exclude: [],
+    // 靜態頁面路徑
+    routes: [
+      '/project',
+      '/skills'
+    ]
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
