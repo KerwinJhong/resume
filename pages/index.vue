@@ -6,9 +6,9 @@
           <v-img eager max-width="150" :src="require('@/assets/avatar.jpg')" :lazy-src="require('@/assets/avatar.jpg')"></v-img>
         </v-col>
         <v-col cols="12" md="10">
-          <p class="title">
+          <h4 class="title font-weight-black mb-2">
             {{ name }}
-          </p>
+          </h4>
           <p class="text-justify">
             {{ text }}
           </p>
