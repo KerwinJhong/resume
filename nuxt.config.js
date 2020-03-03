@@ -15,7 +15,8 @@ module.exports = {
       { hid: 'google-site-verification', name: 'google-site-verification', content: "Bjp1MMdnIv_5cDV189GojWc8oNWe0mG2BVIeu2GaiEc" }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap' }
     ]
   },
   /*
@@ -51,7 +52,7 @@ module.exports = {
     hostname: 'https://www.kerwinresume.gq/', // 網址
     cacheTime: 1000 * 60 * 15, // 站點路由更新頻率，只在 generate: false有用
     gzip: true, // 生成 .xml.gz 檔的 sitemap
-    generate: true, // 允許使用 nuxt generate 生成
+    //generate: true,  允許使用 nuxt generate 生成
     // 排除不要的頁面路由
     exclude: [],
     // 靜態頁面路徑
