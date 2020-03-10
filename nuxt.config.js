@@ -18,6 +18,17 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap' },
       { rel: 'sitemap', type: 'application/xml', title: 'Sitemap', href: 'https://www.kerwinresume.gq/sitemap.xml' }
+    ],
+    script: [
+      { async: 'async', type: 'text/javascript', src: 'https://www.googletagmanager.com/gtag/js?id=UA-160211424-1'},
+      {
+        type: 'text/javascript', innerHTML: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-160211424-1');`
+      }
     ]
   },
   /*
