@@ -11,7 +11,13 @@
               {{ name }}
             </h4>
             <p class="text-justify">
-              {{ text }}
+              Hi, 我是 Kerwin，在機械業有兩年製程工程師經驗，專門幫助企業解決製程上的機械問題，不僅在細節中發現問題，也在問題中發現細節，習慣與問題共存。
+            </p>
+            <p class="text-justify">
+              在學與工作時都有學到程式相關經驗，也漸漸對程式有興趣，在閒暇時間了解程式相關工作後，開始在 W3Schools 刷題目練習，之後在程式中有些基礎後決定踏入相關課程。
+            </p>
+            <p class="text-justify">
+              在2019年七月加入 ALPHA Camp 開始為期七個月的全端學習，過程中相當喜歡團體協作的氛圍，也在最後期間將所學的技術與組員一同完成CRM專案，在專案中獨立擔任前端工程師。
             </p>
             <p class="pb-1">
               <v-icon class="mr-2">
@@ -39,8 +45,7 @@ export default {
   },
   data () {
     return {
-      name: '鐘顯宗(Kerwin Jhong)',
-      text: 'Hi,我是 Kerwin ，在2019年七月加入 ALPHA Camp 開始為期七個月的學習，過程中相當喜歡團體協作、相互激勵、一同成長的氛圍，在最後期間將所學的技術與組員一同完成CRM專案，所以開始尋找前端工程師的職務。'
+      name: '鐘顯宗(Kerwin Jhong)'
     }
   }
 }
