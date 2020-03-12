@@ -24,6 +24,15 @@
           <v-divider class="mx-4"></v-divider>
           <v-card-actions>
             <v-spacer></v-spacer>
+            <a :href="item.medium" style="width: 48px;" target="_blank">
+              <v-img
+                height="24"
+                width="24"
+                class="mx-auto"
+                style="border-radius: 50%;"
+                :src="require('@/assets/Medium icon.png')"
+              />
+            </a>
             <v-btn icon :href="item.heroku" target="_blank">
               <v-icon>mdi-application</v-icon>
             </v-btn>
@@ -47,6 +56,7 @@ export default {
           skills: 'vue、vuex、scss',
           img: require('@/assets/CRM.png'),
           items: ['獨立開發', '與後端工程師共同開發', 'wireframe', 'POS功能', 'Dashboard', '客戶端-點餐功能', '開發時程6週'],
+          medium: 'https://medium.com/@sh940718/%E6%BF%BE%E5%AE%A2%E5%B9%B3%E5%8F%B0-crm%E7%B3%BB%E7%B5%B1%E6%BF%BE%E5%AE%A2%E5%B9%B3%E5%8F%B0-9e0af7178ebd',
           heroku: 'https://recus.herokuapp.com/signin',
           github: 'https://github.com/IgnacioFan/recus-platform'
         }
